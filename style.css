@@ -1,0 +1,518 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+/* From Uiverse.io by satyamchaudharydev */ 
+button {
+    --primary-color: #2a8eec;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    }
+
+    button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+    }
+
+    button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+    }
+
+    button:hover {
+    background-color: var(--hover-color);
+    }
+
+    button:hover .arrow {
+    background: var(--secondary-color);
+    }
+
+    button:hover .arrow:before {
+    right: 0;
+    }
+.bg-container {
+    background-image: url('img/Blue\ Minimalist\ Desktop\ Wallpaper.png');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(183, 64, 64, 0.207); /* Black with 50% opacity */
+}
+.content {
+    color: white;
+    padding: 120px;
+    text-align: center;
+    font-size: large;
+}
+.tex{
+    font-size: 60px;
+} 
+.button1 {
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+justify-content: center;
+padding: 15px 30px;
+border: 0;
+position: relative;
+overflow: hidden;
+border-radius: 10rem;
+transition: all 0.02s;
+font-weight: bold;
+cursor: pointer;
+color: rgb(37, 37, 37);
+z-index: 0;
+box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button1:hover {
+background: rgb(193, 228, 248);
+color: rgb(33, 0, 85);
+}
+
+.button1:active {
+transform: scale(0.97);
+}
+
+.hoverEffect1 {
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+}
+
+.hoverEffect1 div {
+background: rgb(222, 0, 75);
+background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+);
+border-radius: 40rem;
+width: 10rem;
+height: 10rem;
+transition: 0.4s;
+filter: blur(20px);
+animation: effect infinite 3s linear;
+opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+width: 8rem;
+height: 8rem;
+}
+
+@keyframes effect {
+0% {
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+/*.section{
+    padding: 30px;
+    font-size: large;
+    height: 500px;
+}
+.do{
+    text-align: center;
+}*/
+/* From Uiverse.io by Yaya12085 */ 
+.task {
+    position: relative;
+    color: #2e2e2f;
+    cursor: move;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    margin-bottom: 1rem;
+    border: 3px dashed transparent;
+    max-width: 350px;
+    }
+
+    .task:hover {
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    border-color: rgba(162, 179, 207, 0.2) !important;
+    }
+
+    .task p {
+    font-size: 15px;
+    margin: 1.2rem 0;
+    }
+
+    .tag {
+    border-radius: 100px;
+    padding: 4px 13px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #1389eb;
+    }
+
+    .tags {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .options {
+    background: transparent;
+    border: 0;
+    color: #c4cad3;
+    font-size: 17px;
+    }
+
+    .options svg {
+    fill: #9fa4aa;
+    width: 20px;
+    }
+
+    .stats {
+    position: relative;
+    width: 100%;
+    color: #9fa4aa;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .stats div {
+    margin-right: 1rem;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    }
+
+    .stats svg {
+    margin-right: 5px;
+    height: 100%;
+    stroke: #9fa4aa;
+    }
+
+    .viewer span {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(28, 117, 219);
+    margin-right: -10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 2px;
+    }
+
+    .viewer span svg {
+    stroke: #fff;
+    }
+    .section1{
+        padding: 30px;
+        font-size: large;
+        background-color: #2a8eec;
+        height: 450px;
+    }
+.section{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
+.circle {
+    width: 100%;
+    height:300px ;
+    border-radius: 52% 48% 38% 62% / 25% 37% 63% 75%;
+    overflow:hidden;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+}
+.arrow1 {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.do{
+    text-align: center;
+    padding-top: 20px;
+}
+.section2{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+}
+.aboutme{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+.skills-container {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill-level {
+    height: 10px;
+    background-color: #72c1f9;
+    border-radius: 5px 0 0 5px;
+}
+input {
+    width:800px ;
+    padding: 15px 15px 15px 35px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}  
+textarea {
+    height: 150px;
+    width: 800px;
+    resize: vertical;
+    border-radius:10px ;
+}
+.section3{
+    width: 100%;
+    height: 550PX;
+    padding: 20PX;
+    align-items: center;
+    text-align: center;
+    background-color: #0fafe0;
+    justify-content: center;
+    align-content: center;
+}
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+display: inline-flex;
+list-style: none;
+height: 120px;
+width: 100%;
+padding-top: 40px;
+font-family: "Poppins", sans-serif;
+justify-content: center;
+}
+
+.wrapper .icon {
+position: relative;
+background: #fff;
+border-radius: 50%;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background: #fff;
+color: #fff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background: #fff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+background: #1877f2;
+color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+background: #1da1f2;
+color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+background: #e4405f;
+color: #fff;
+}
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+background: #1da1f2;
+color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px ;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.newsletter-form button:hover {
+    color: white;
+    background-color: #1877f2;
+}
+
+
